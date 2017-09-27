@@ -1,0 +1,9 @@
+<body>
+    <% @videos.music_videos(params['Music Videos']).each do |video| %>
+
+ <iframe src='https://www.youtube.com/embed/<%= video.url %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+
+
+    <% end %>
+
+</body>

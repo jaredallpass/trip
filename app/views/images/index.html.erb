@@ -1,0 +1,17 @@
+
+
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+
+  </head>
+  <body>
+<div class="gallery"> 
+<% @images.each do |image| %> 
+<%= image_tag image.image.url %> </div>
+
+<% end %> 
+
+
+  </body>
+</html>
