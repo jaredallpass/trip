@@ -1,14 +1,23 @@
 Rails.application.routes.draw do
-  resources :image_categories
+  resources :word_pornstars
+  resources :uploads
+  resources :gifs
+  resources :word_porns
+  resources :music_sub_categories
   resources :music_categories
-  resources :video_categories
-  resources :philosophers
-  resources :lectures
-  resources :videos
+  resources :musics
+  resources :image_sub_categories
+  resources :image_categories
   resources :images
+  resources :video_sub_categories
+  resources :video_categories
+  resources :videos
   devise_for :users
+  resources :media_contents, only: [:create]
+
 root 'static_pages#index'
   get  '/signup',  to: 'users#new'
+  get  '/admin',  to: 'administrators#admin'
   post '/signup',  to: 'users#create'
   get '/images', to: 'images#index'
   get '/videos', to: 'videos#index'

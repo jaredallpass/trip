@@ -1,0 +1,17 @@
+<%= form_with(model: music_sub_category, local: true) do |form| %>
+  <% if music_sub_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(music_sub_category.errors.count, "error") %> prohibited this music_sub_category from being saved:</h2>
+
+      <ul>
+      <% music_sub_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

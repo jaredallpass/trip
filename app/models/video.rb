@@ -1,6 +1,5 @@
 class Video < ApplicationRecord
-  	scope :music_videos, -> { where(category: 'Music Videos') }
-   	scope :funny_shit, -> { where(category: 'Funny Shit') }
-	scope :mother_nature, -> { where(category: 'Mother Nature') }
-	scope :eye_candy, -> { where(category: 'Eye Candy') }
+  has_many :video_categories
+  has_many :video_sub_categories, through: :video_categories
+  has_many :uploads
 end

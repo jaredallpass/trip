@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Video Sub Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @video_sub_categories.each do |video_sub_category| %>
+      <tr>
+        <td><%= link_to 'Show', video_sub_category %></td>
+        <td><%= link_to 'Edit', edit_video_sub_category_path(video_sub_category) %></td>
+        <td><%= link_to 'Destroy', video_sub_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Video Sub Category', new_video_sub_category_path %>

@@ -17,7 +17,7 @@ class MusicCategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create music_category" do
     assert_difference('MusicCategory.count') do
-      post music_categories_url, params: { music_category: { name: @music_category.name } }
+      post music_categories_url, params: { music_category: {  } }
     end
 
     assert_redirected_to music_category_url(MusicCategory.last)
@@ -34,7 +34,7 @@ class MusicCategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update music_category" do
-    patch music_category_url(@music_category), params: { music_category: { name: @music_category.name } }
+    patch music_category_url(@music_category), params: { music_category: {  } }
     assert_redirected_to music_category_url(@music_category)
   end
 

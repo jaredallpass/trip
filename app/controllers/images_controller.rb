@@ -24,12 +24,11 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.json
   def create
-   
-  @image = Image.create(image_params)
+    @image = Image.new(image_params)
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully added.' }
+        format.html { redirect_to @image, notice: 'Image was successfully created.' }
         format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new }
@@ -70,7 +69,6 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      params.require(:image).permit(:image)
+      params.fetch(:image, {})
     end
-
 end

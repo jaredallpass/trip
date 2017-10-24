@@ -1,0 +1,17 @@
+<%= form_with(model: word_pornstar, local: true) do |form| %>
+  <% if word_pornstar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(word_pornstar.errors.count, "error") %> prohibited this word_pornstar from being saved:</h2>
+
+      <ul>
+      <% word_pornstar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

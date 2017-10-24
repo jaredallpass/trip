@@ -1,2 +1,0 @@
-class Philosopher < ApplicationRecord
-end

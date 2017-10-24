@@ -6,18 +6,7 @@ class VideosController < ApplicationController
   def index
     @videos = Video.all
   end
-  def music_videos
-    @videos = Video.all
-  end
-    def funny
-    @videos = Video.all
-  end
-  def nature
-    @videos = Video.all
-  end
-  def eye_candy
-   @videos = Video.all
-  end
+
   # GET /videos/1
   # GET /videos/1.json
   def show
@@ -26,7 +15,6 @@ class VideosController < ApplicationController
   # GET /videos/new
   def new
     @video = Video.new
-  
   end
 
   # GET /videos/1/edit
@@ -36,9 +24,8 @@ class VideosController < ApplicationController
   # POST /videos
   # POST /videos.json
   def create
-
     @video = Video.new(video_params)
-   
+
     respond_to do |format|
       if @video.save
         format.html { redirect_to @video, notice: 'Video was successfully created.' }
@@ -75,7 +62,6 @@ class VideosController < ApplicationController
   end
 
   private
-
     # Use callbacks to share common setup or constraints between actions.
     def set_video
       @video = Video.find(params[:id])
@@ -83,7 +69,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:url, :category)
-
+      params.fetch(:video, {})
     end
 end

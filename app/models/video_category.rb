@@ -1,8 +1,5 @@
 class VideoCategory < ApplicationRecord
-	has_many :videos
-
-def to_s
-self.name
-end
-
+    has_many :video_sub_categories
+    belongs_to :video
+    has_many :uploads
 end

@@ -1,4 +1,5 @@
-<%= form_for @image, url: images_path, html: { multipart: true } do |form| %>
-  <%= form.file_field :image %>
-  <%= form.submit %>
-<% end %>
+<h1>New Image</h1>
+
+<%= render 'form', image: @image %>
+
+<%= link_to 'Back', images_path %>

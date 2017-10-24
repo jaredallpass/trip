@@ -42,22 +42,11 @@
 
 
 
-#particles {
-    position: absolute;
-
-}
-
-canvas {
-    display:block;
-    background: rgb(0,0,0);
-    position: fixed;
-    z-index: -1;
-
-}
 
 
-header{ 
-background-image: image-url('header.jpg'); 
+
+header{
+background-image: image-url('header.jpg');
 background-position: 100% 100%;
 background-size: 3%;
    background-repeat: repeat;
@@ -103,7 +92,7 @@ display:block;
   -webkit-box-shadow: 4px 4px 14px #000;
   box-shadow: 4px 4px 14px #000;
 
-  
+
 }
 
 

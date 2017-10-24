@@ -17,7 +17,7 @@ class ImageCategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create image_category" do
     assert_difference('ImageCategory.count') do
-      post image_categories_url, params: { image_category: { name: @image_category.name } }
+      post image_categories_url, params: { image_category: {  } }
     end
 
     assert_redirected_to image_category_url(ImageCategory.last)
@@ -34,7 +34,7 @@ class ImageCategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update image_category" do
-    patch image_category_url(@image_category), params: { image_category: { name: @image_category.name } }
+    patch image_category_url(@image_category), params: { image_category: {  } }
     assert_redirected_to image_category_url(@image_category)
   end
 

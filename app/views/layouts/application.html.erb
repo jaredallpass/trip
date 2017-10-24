@@ -2,9 +2,9 @@
 
   <head>
 
-<%= render 'layouts/header' %>
 
-<%= csrf_meta_tags %>
+
+    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,16 +12,15 @@
   </head>
 
 <body>
-     
-<div id="particles-js"></div> 
+    <%= render 'layouts/header' %>
+<div id="particles-j"></div>
 <br>
 <br>
 <br>
 <br>
 <br>
        <%= yield %>
-     
+
 
   </body>
 </html>
-
